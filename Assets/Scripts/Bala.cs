@@ -13,13 +13,13 @@ public class Bala : MonoBehaviour
     
     // Start is called before the first frame update
     void Start(){
-        // destruir bala despues de 3 segundos
-        Destroy(gameObject, 3);
+        // destruir bala después de 5 segundos
+        Destroy(gameObject, 5);
     }
 
     // Update is called once per frame
     void Update(){
-        transform.Translate(0, 5 * Time.deltaTime, 0, Space.World); 
+        transform.Translate(0, 10 * Time.deltaTime, 0, Space.World); 
     }
 
     void OnTriggerEnter(Collider c){

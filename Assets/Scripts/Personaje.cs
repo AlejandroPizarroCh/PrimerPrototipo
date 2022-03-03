@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Personaje : MonoBehaviour
 {
 
-    public float velocidad = 10;
+    public float velocidad = 15;
     public GameObject original; 
     public Transform referenciaDePosicion; 
     public Text scoreText;
