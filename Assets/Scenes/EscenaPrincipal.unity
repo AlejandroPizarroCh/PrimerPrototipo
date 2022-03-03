@@ -808,7 +808,7 @@ MonoBehaviour:
   velocidad: 10
   original: {fileID: 7177891394743457257, guid: 4c5b7c0110e936d4db2f09ae6191a52e, type: 3}
   referenciaDePosicion: {fileID: 814132989}
-  texto: {fileID: 865919261}
+  scoreText: {fileID: 865919261}
 --- !u!54 &1551990909
 Rigidbody:
   m_ObjectHideFlags: 0

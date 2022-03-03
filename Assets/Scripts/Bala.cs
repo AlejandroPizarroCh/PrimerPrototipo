@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
+    private int score = 1;
+    private Personaje personaje;  
 
+    void Awake(){
+        personaje = GameObject.FindObjectOfType<Personaje>(); 
+    }
+    
     // Start is called before the first frame update
     void Start(){
         // destruir bala despues de 3 segundos
@@ -19,5 +25,8 @@ public class Bala : MonoBehaviour
     void OnTriggerEnter(Collider c){
         Destroy(c.gameObject); // destruir enemigo 
         Destroy(gameObject);  // destruir bala
+
+        // puntaje - kills
+        personaje.UpdateScore(score); 
     }
 }

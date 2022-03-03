@@ -9,14 +9,15 @@ public class Personaje : MonoBehaviour
     public float velocidad = 10;
     public GameObject original; 
     public Transform referenciaDePosicion; 
-    public Text texto;
+    public Text scoreText;
+    private int currentScore; 
     
     
     // Start is called before the first frame update
     void Start(){
-        texto.fontSize = 18;
-        texto.fontStyle = FontStyle.Italic; 
-        texto.text = "Hola!"; 
+        scoreText.fontSize = 18;
+        scoreText.fontStyle = FontStyle.Italic;
+        scoreText.text = "Kills: ";  
     } 
 
     // Update is called once per frame
@@ -39,11 +40,11 @@ public class Personaje : MonoBehaviour
                 referenciaDePosicion.rotation
             ); 
         }
+    }
 
-        texto.fontSize = 18;
-        texto.fontStyle = FontStyle.Italic; 
-        texto.text = "Hola!"; 
-
+    public void UpdateScore(int score){
+        currentScore += score; 
+        scoreText.text = "Kills: " + currentScore.ToString(); 
     }
 
 }
